@@ -16,7 +16,9 @@ jobs:
           java-version: '17'
       - uses: android-actions/setup-android@v3
       - name: Install Android SDK
-        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+        run: |
+          sdkmanager --install 'platforms;android-35' 'build-tools;35.0.0'
+          sdkmanager --licenses < /dev/null || true
       - name: Install Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
