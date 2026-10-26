@@ -1,0 +1,4 @@
+plugins { id 'com.android.application' }
+android { namespace 'com.novahome.tv'; compileSdk 35
+    defaultConfig { applicationId 'com.novahome.tv'; minSdk 23; targetSdk 32; versionCode 1; versionName '1.0' }
+}
